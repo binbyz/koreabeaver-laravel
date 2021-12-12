@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const path = require('path');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,6 +12,25 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .vue()
-    .sass('resources/sass/app.scss', 'public/css');
+ mix.webpackConfig({
+	module: {
+		rules: [
+			{
+				test: /\.pug$/,
+				loader: 'pug-plain-loader'
+			}
+		]
+	}
+});
+
+mix.webpackConfig({
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'resources')
+    },
+  },
+});
+
+mix.ts('resources/js/main.ts', 'public/js')
+    .vue({ version: 3 });
+    // .sass('resources/sass/app.scss', 'public/css');

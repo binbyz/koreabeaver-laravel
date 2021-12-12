@@ -1,7 +1,22 @@
-// Body
-$body-bg: #f8fafc;
+/*** App Environments ***/
+$font-color: #222222;
+$font-size: 14px;
+$accent-color: #0f1f2e;
+$background-color: #ffffff;
+$content-width: 1200px;
+$component-radius: 15px;
 
-// Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+/*** Colors ***/
+$color-white: #fff;
+$color-black: #0d0d0d;
+
+$color-silver: #e5e5e5;
+$color-silver-soft: #f0f0f0;
+$color-silver-bold: #70757a;
+$color-silver-bolder: #404040;
+
+$color-red: #ff3333;
+$color-red-soft: #ff4d4d;
+$color-red-bold: #db3b21;
+
+$color-green-soft: #98ecbf;

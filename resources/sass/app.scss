@@ -1,8 +1,50 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import '@/sass/_variables.scss';
+@import '@/sass/_mixins.scss';
 
-// Variables
-@import 'variables';
+#app {
+  height: 100%;
+}
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: $background-color;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $font-color;
+  @include reset-margin;
+  font-size: $font-size;
+}
+
+a {
+  color: $font-color;
+  text-decoration: none;
+  &:hover {
+    color: $accent-color;
+  }
+  &:visited {
+    color: $font-color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include reset-margin;
+  font-weight: normal;
+  letter-spacing: -1px;
+  font-size: $font-size;
+}
+
+ul, li {
+  @include reset-margin;
+}
+
+p {
+  @include reset-margin;
+}
+
+footer {
+  @include reset-margin;
+}
